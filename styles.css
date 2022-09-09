@@ -281,7 +281,8 @@ h1 span {
 .section3 span,
 .section4 p,
 .section5 p,
-.section6 p {
+.section6 p,
+.section7 p {
   color: var(--text_light_secondary);
 }
 
@@ -295,7 +296,8 @@ h1 span {
 .section3 h2,
 .section4 h2,
 .section5 h2,
-.section6 h2 {
+.section6 h2,
+.section7 h2 {
   font-size: 54px;
   font-weight: 800;
   line-height: 1;
@@ -304,7 +306,8 @@ h1 span {
 
 .section3 a,
 .section4 .timeline div:nth-child(3) a,
-.section6 .content .info .read {
+.section6 .content .info .read,
+.section7 a {
   display: inline-block;
   color: var(--icon_light_primary);
   font-weight: 800;
@@ -472,6 +475,7 @@ h1 span {
   border-radius: 0 0 20px 20px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .section6 .content .label {
@@ -481,6 +485,7 @@ h1 span {
 
 .label .active {
   border-right: 3px solid #08c;
+  background-color: hsla(0, 0%, 100%, 0.199);
 }
 
 .section6 .content .label a {
@@ -498,14 +503,48 @@ h1 span {
   padding: 10px;
 }
 
+.previous,
+.next {
+  color: hsla(0, 0%, 100%, 0.377);
+}
+
+.section7 .container {
+  margin: 60px 0;
+  display: flex;
+}
+
+.section7 .container div {
+  width: 50%;
+  margin-top: 64px;
+}
+
+.section7 .container img {
+  width: 50%;
+}
+
+.section8 {
+  background-color: var(--background_light_main);
+}
+
 .section3 a:hover,
-.section4 .timeline div:nth-child(3) a:hover {
+.section4 .timeline div:nth-child(3) a:hover,
+.section6 .read:hover,
+.section7 a:hover {
   color: var(--button_light_primary_hover);
 }
 
 .section3 a:active,
 .section4 .timeline div:nth-child(3) a:active {
   color: var(--button_light_primary_pressed);
+}
+
+.section6 .content .label a:hover {
+  background-color: hsla(0, 0%, 100%, 0.103);
+}
+
+.previous:hover,
+.next:hover {
+  color: hsla(0, 0%, 100%, 0.589);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -530,7 +569,8 @@ h1 span {
     width: 223px;
     height: 223px;
   }
-  .section1 .container {
+  .section1 .container,
+  .section7 .container {
     flex-direction: column;
     text-align: center;
   }
@@ -592,6 +632,13 @@ h1 span {
   .section4 .timeline div:nth-child(3):before {
     transform: translate(-100%, -24px);
   }
+  .section7 .container div {
+    width: 100%;
+  }
+  .section7 .container img {
+    padding: 60px;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 834px) {
@@ -602,7 +649,10 @@ h1 span {
   .section1 h1,
   .section2 .container .section2-first-child h2,
   .section3 .container h2,
-  .section4 h2 {
+  .section4 h2,
+  .section5 h2,
+  .section6 h2,
+  .section7 h2 {
     font-size: 24px;
   }
   .section1 p,
@@ -610,7 +660,14 @@ h1 span {
   .section3 .container p,
   .section3 .container a,
   .section4 div div p,
-  .section4 .timeline div:nth-child(3) a {
+  .section4 .timeline div:nth-child(3) a,
+  .section5 p,
+  .section6 p,
+  .section7 p,
+  .section5 a,
+  .section6 .content .info .read,
+  .section7 a,
+  .section6 a {
     font-size: 12px;
   }
 }
