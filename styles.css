@@ -165,7 +165,8 @@ h1 span {
 
 .button-join,
 .button-learn,
-.button-read {
+.button-read,
+.apps {
   display: inline-block;
   background-color: var(--button_dark_primary);
   color: transparent;
@@ -198,13 +199,15 @@ h1 span {
 
 .button-join:hover,
 .button-learn:hover,
-.button-read:hover {
+.button-read:hover,
+.apps:hover {
   background-color: var(--button_light_primary_hover);
 }
 
 .button-join:active,
 .button-learn:active,
-.button-read:active {
+.button-read:active,
+.apps:active {
   background-color: var(--button_dark_primary_pressed);
 }
 
@@ -282,7 +285,11 @@ h1 span {
 .section4 p,
 .section5 p,
 .section6 p,
-.section7 p {
+.section7 p,
+.section8 p,
+.section9 p,
+footer a,
+footer .logos {
   color: var(--text_light_secondary);
 }
 
@@ -297,7 +304,9 @@ h1 span {
 .section4 h2,
 .section5 h2,
 .section6 h2,
-.section7 h2 {
+.section7 h2,
+.section8 h2,
+.section9 h2 {
   font-size: 54px;
   font-weight: 800;
   line-height: 1;
@@ -307,7 +316,8 @@ h1 span {
 .section3 a,
 .section4 .timeline div:nth-child(3) a,
 .section6 .content .info .read,
-.section7 a {
+.section7 a,
+.section9 span {
   display: inline-block;
   color: var(--icon_light_primary);
   font-weight: 800;
@@ -328,7 +338,8 @@ h1 span {
 }
 
 .section4 h4,
-.section6 h4 {
+.section6 h4,
+.section9 h4 {
   font-size: 24px;
   font-weight: 800;
 }
@@ -524,17 +535,119 @@ h1 span {
 
 .section8 {
   background-color: var(--background_light_main);
+  padding: 50px 0;
+  width: 94%;
+  position: relative;
+  left: 3%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.section8 .container div {
+  text-align: center;
+  overflow: hidden;
+}
+
+.section8 .container .images {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.section8 .container .images .left,
+.section8 .container .images .right {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.section8 .container .images .left div,
+.section8 .container .images .right div {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section8 .container .images div span img,
+.section8 .container .images .left .blank {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #00000056;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.section9 .container {
+  text-align: center;
+}
+
+.section9 .cards {
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section9 .cards div {
+  width: 30%;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.322);
+}
+
+.section9 .cards div img {
+  width: 100%;
+  border-radius: 20px;
+  background-size: cover;
+}
+
+.section9 .cards div a h4,
+.section9 .cards div a p,
+.section9 .cards div a span {
+  padding: 5px 20px;
+}
+
+footer .first-div {
+  display: flex;
+  margin: 40px 0;
+}
+
+footer .first-div .footer-links {
+  width: 100%;
+  display: flex;
+}
+
+footer .first-div .footer-links div {
+  display: flex;
+  flex-direction: row;
+}
+
+footer .first-div .footer-links div div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+}
+
+footer .first-div .footer-links div div a {
+  display: inline-block;
+}
+footer .logos {
+  border-top: 1px solid #00000056;
+  padding: 12px 0;
 }
 
 .section3 a:hover,
 .section4 .timeline div:nth-child(3) a:hover,
 .section6 .read:hover,
-.section7 a:hover {
+.section7 a:hover,
+footer a:hover {
   color: var(--button_light_primary_hover);
 }
 
 .section3 a:active,
-.section4 .timeline div:nth-child(3) a:active {
+.section4 .timeline div:nth-child(3) a:active,
+footer a :active {
   color: var(--button_light_primary_pressed);
 }
 
@@ -639,6 +752,16 @@ h1 span {
     padding: 60px;
     width: 100%;
   }
+  .section9 .cards {
+    flex-direction: column;
+  }
+  .section9 .cards div {
+    width: 100%;
+  }
+  footer .first-div,
+  footer .first-div .footer-links {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 834px) {
@@ -652,9 +775,18 @@ h1 span {
   .section4 h2,
   .section5 h2,
   .section6 h2,
-  .section7 h2 {
+  .section7 h2,
+  .section8 h2,
+  .section9 h2 {
     font-size: 24px;
   }
+
+  .section4 h4,
+  .section6 h4,
+  .section9 h4 {
+    font-size: 16px;
+  }
+
   .section1 p,
   .section2 .container .section2-first-child p,
   .section3 .container p,
@@ -667,7 +799,11 @@ h1 span {
   .section5 a,
   .section6 .content .info .read,
   .section7 a,
-  .section6 a {
+  .section6 a,
+  .section8 p,
+  .section8 a,
+  .section9 p,
+  .section9 span {
     font-size: 12px;
   }
 }
