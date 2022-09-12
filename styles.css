@@ -616,20 +616,17 @@ footer .first-div {
 footer .first-div .footer-links {
   width: 100%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 footer .first-div .footer-links div {
-  display: flex;
-  flex-direction: row;
-}
-
-footer .first-div .footer-links div div {
   display: flex;
   flex-direction: column;
   padding: 0 24px;
 }
 
-footer .first-div .footer-links div div a {
+footer .first-div .footer-links div a {
   display: inline-block;
 }
 footer .logos {
@@ -690,6 +687,7 @@ footer a :active {
 
   .button-github {
     margin-left: 0px;
+    margin: 16px 0;
   }
 
   h1 {
@@ -762,10 +760,16 @@ footer a :active {
   }
   .section9 .cards div {
     width: 100%;
+    margin: 16px 0;
   }
-  footer .first-div,
-  footer .first-div .footer-links {
+  footer .first-div {
     flex-direction: column;
+  }
+  footer .first-div .footer-links div {
+    width: 48%;
+  }
+  .first-div img {
+    padding: 0 24px;
   }
 }
 
